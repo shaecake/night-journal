@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
 
 /* =========================
    VARIABLES
@@ -8,6 +8,7 @@
 :root {
   --bg: #08090d;
   --panel: rgba(10, 11, 17, 0.82);
+
   --pink: #dba5bd;
   --pink-soft: #b9879e;
 
@@ -47,24 +48,21 @@ body {
   color: var(--text);
 
   font-family:
-  "IBM Plex Mono",
-  monospace;
+    "IBM Plex Mono",
+    monospace;
+
+  position: relative;
+  overflow-x: hidden;
 }
 
 a {
   color: inherit;
 }
 
+
 /* =========================
    RAINY NIGHT ATMOSPHERE
 ========================= */
-
-body {
-  position: relative;
-  overflow-x: hidden;
-}
-
-/* blurry city-light glow */
 
 body::before {
   content: "";
@@ -107,8 +105,6 @@ body::before {
     );
 }
 
-/* rain + scanline layer */
-
 body::after {
   content: "";
 
@@ -142,6 +138,7 @@ body::after {
   opacity: 0.85;
 }
 
+
 /* =========================
    DIARY COVER PAGE
 ========================= */
@@ -151,7 +148,7 @@ body::after {
   justify-content: center;
   align-items: center;
 
-  padding: 50px 20px;
+  padding: 28px 20px;
 
   background:
     radial-gradient(
@@ -170,19 +167,50 @@ body::after {
 .diary-cover {
   position: relative;
 
-  width: min(600px, 90vw);
-  min-height: 720px;
+  width: min(760px, 92vw);
+  min-height: 820px;
 
   padding: 50px;
 
   background:
-  radial-gradient(
-    circle at 70% 20%,
-    rgba(116, 73, 104, 0.12),
-    transparent 30%
-  ),
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(116, 73, 104, 0.12),
+      transparent 30%
+    ),
 
-     .diary-cover::after {
+    linear-gradient(
+      145deg,
+      #161721,
+      #090a10 72%
+    );
+
+  border: 1px solid #575063;
+
+  box-shadow:
+    0 0 0 5px #090a0f,
+    0 0 0 6px #34303d,
+    0 0 35px rgba(187, 126, 158, 0.10),
+    0 35px 90px rgba(0, 0, 0, 0.85);
+
+  overflow: visible;
+}
+
+.diary-cover::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 22px;
+  bottom: 0;
+
+  width: 1px;
+
+  background: #312c38;
+}
+
+.diary-cover::after {
   content: "";
 
   position: absolute;
@@ -200,39 +228,6 @@ body::after {
     );
 
   opacity: 0.7;
-}
-
-  linear-gradient(
-    145deg,
-    #161721,
-    #090a10 72%
-  );
-
-  border: 1px solid #575063;
-
-  box-shadow:
-  0 0 0 5px #090a0f,
-  0 0 0 6px #34303d,
-
-  0 0 35px rgba(187, 126, 158, 0.10),
-
-  0 35px 90px rgba(0, 0, 0, 0.85);
-
-  overflow: visible;
-}
-
-.diary-cover::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: 22px;
-  bottom: 0;
-
-  width: 1px;
-
-  background: #312c38;
 }
 
 .property-label {
@@ -300,7 +295,7 @@ body::after {
     "Cormorant Garamond",
     serif;
 
-  font-size: clamp(38px, 7vw, 58px);
+  font-size: clamp(46px, 7vw, 68px);
   font-weight: 500;
 
   letter-spacing: 1px;
@@ -314,14 +309,14 @@ body::after {
 
   color: #9a919e;
 
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 
 .open-diary {
   display: inline-block;
 
-  padding: 14px 32px;
+  padding: 16px 38px;
 
   border: 1px solid #b37d97;
 
@@ -330,6 +325,8 @@ body::after {
   color: #dcb2c4;
 
   text-decoration: none;
+
+  font-size: 14px;
 
   transition:
     background 0.2s ease,
@@ -390,7 +387,7 @@ body::after {
   position: absolute;
 
   top: 140px;
-  right: -45px;
+  right: -50px;
 
   display: flex;
   flex-direction: column;
@@ -398,9 +395,9 @@ body::after {
 }
 
 .diary-tabs span {
-  width: 46px;
+  width: 52px;
 
-  padding: 14px 4px;
+  padding: 18px 5px;
 
   background: #a1798e;
 
@@ -408,7 +405,7 @@ body::after {
 
   color: #17131a;
 
-  font-size: 9px;
+  font-size: 10px;
 
   writing-mode: vertical-rl;
 }
@@ -419,27 +416,29 @@ body::after {
 ========================= */
 
 .journal-page {
-  padding: 35px 20px;
+  padding: 22px 18px;
 }
 
 .journal-shell {
-  width: min(1180px, 95vw);
+  width: min(1360px, 96vw);
 
   margin: auto;
 
   border: 1px solid var(--line);
 
- background: rgba(7, 8, 13, 0.88);
+  background: rgba(7, 8, 13, 0.88);
 
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 
   box-shadow:
     0 20px 80px rgba(0, 0, 0, 0.65);
 }
 
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 .journal-header {
   padding: 30px;
@@ -452,7 +451,7 @@ backdrop-filter: blur(5px);
 .journal-logo {
   color: var(--pink);
 
-  font-size: 27px;
+  font-size: 34px;
   letter-spacing: 2px;
 }
 
@@ -461,11 +460,13 @@ backdrop-filter: blur(5px);
 
   color: var(--muted);
 
-  font-size: 11px;
+  font-size: 12px;
 }
 
 
-/* NAV */
+/* =========================
+   NAV
+========================= */
 
 .journal-nav {
   display: flex;
@@ -481,7 +482,7 @@ backdrop-filter: blur(5px);
 
   color: #9f99a7;
 
-  font-size: 11px;
+  font-size: 12px;
 
   text-decoration: none;
 }
@@ -496,15 +497,17 @@ backdrop-filter: blur(5px);
 }
 
 
-/* GRID */
+/* =========================
+   GRID
+========================= */
 
 .journal-grid {
   display: grid;
 
   grid-template-columns:
-    220px
+    250px
     minmax(0, 1fr)
-    220px;
+    250px;
 
   gap: 14px;
 
@@ -512,7 +515,9 @@ backdrop-filter: blur(5px);
 }
 
 
-/* CYBER WINDOWS */
+/* =========================
+   CYBER WINDOWS
+========================= */
 
 .cyber-box {
   margin-bottom: 14px;
@@ -531,25 +536,29 @@ backdrop-filter: blur(5px);
 
   color: #aaa2b5;
 
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .box-content {
-  padding: 16px;
+  padding: 18px;
 
-  font-size: 11px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.75;
 }
 
 
-/* PROFILE */
+/* =========================
+   PROFILE
+========================= */
 
 .profile-name {
   color: var(--pink);
 }
 
 
-/* CURRENT */
+/* =========================
+   CURRENT
+========================= */
 
 .current-list p {
   margin: 7px 0;
@@ -560,7 +569,9 @@ backdrop-filter: blur(5px);
 }
 
 
-/* WELCOME */
+/* =========================
+   WELCOME
+========================= */
 
 .welcome-box h1 {
   margin-top: 0;
@@ -571,14 +582,17 @@ backdrop-filter: blur(5px);
     "Cormorant Garamond",
     serif;
 
-  font-size: 29px;
+  font-size: 34px;
   font-weight: 400;
   font-style: italic;
 
   letter-spacing: 0.5px;
 }
 
-/* ENTRY */
+
+/* =========================
+   ENTRY
+========================= */
 
 .entry-date {
   color: var(--muted);
@@ -589,8 +603,12 @@ backdrop-filter: blur(5px);
 .entry-preview h2 {
   color: var(--pink);
 
-  font-family: Georgia, serif;
-  font-weight: normal;
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .read-more {
@@ -604,7 +622,9 @@ backdrop-filter: blur(5px);
 }
 
 
-/* QUICK LINKS */
+/* =========================
+   QUICK LINKS
+========================= */
 
 .quick-links {
   display: flex;
@@ -623,7 +643,9 @@ backdrop-filter: blur(5px);
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 .journal-footer {
   display: flex;
@@ -684,7 +706,7 @@ backdrop-filter: blur(5px);
   }
 
   .diary-cover {
-    min-height: 620px;
+    min-height: 680px;
 
     padding: 30px;
   }
