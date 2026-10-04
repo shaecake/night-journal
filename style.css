@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background: #0b0b0d;
+  color: #d7c9cf;
+
+  font-family: Georgia, serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  width: min(900px, 88vw);
+  padding: 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 70px;
+  padding-bottom: 14px;
+
+  border-bottom: 1px solid #4a3038;
+}
+
+.site-title {
+  color: #d6a0af;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #99878d;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #e1a7b8;
+}
+
+.hero {
+  max-width: 650px;
+}
+
+.hero h1 {
+  margin: 0 0 22px;
+
+  color: #d3a0af;
+  font-size: clamp(42px, 7vw, 74px);
+  font-weight: normal;
+  line-height: 1.05;
+}
+
+.hero p {
+  max-width: 540px;
+
+  color: #9f9297;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.entry-card {
+  margin-top: 60px;
+  padding: 30px;
+
+  border: 1px solid #3e2c32;
+  background: #101012;
+}
+
+.entry-label {
+  margin: 0 0 10px;
+
+  color: #9c6676;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.entry-card h2 {
+  margin: 0 0 12px;
+
+  color: #d9a6b5;
+  font-weight: normal;
+}
+
+.entry-card p {
+  color: #8f8488;
+  line-height: 1.6;
+}
