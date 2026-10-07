@@ -148,14 +148,20 @@ body::after {
   justify-content: center;
   align-items: center;
 
-  padding: 28px 20px;
+  min-height: 100vh;
+  padding: 24px;
 
   background:
-    radial-gradient(
-      circle at 50% 20%,
-      #222031,
-      #090a0f 65%
-    );
+    linear-gradient(
+      rgba(5, 6, 10, 0.42),
+      rgba(5, 6, 10, 0.58)
+    ),
+    url("images/desk-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .cover-wrap {
