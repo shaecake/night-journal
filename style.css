@@ -245,6 +245,56 @@ body::after {
    DIARY COVER DETAILS
 ========================= */
 
+   .diary-clasp {
+  position: absolute;
+
+  top: 50%;
+  right: -28px;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+
+  z-index: 5;
+}
+
+.clasp-plate {
+  width: 54px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #7a6251,
+      #3c3029
+    );
+
+  border: 1px solid #a58a72;
+
+  color: #d8b7c3;
+
+  font-size: 21px;
+
+  box-shadow:
+    inset 0 0 0 2px rgba(0, 0, 0, 0.35),
+    0 5px 12px rgba(0, 0, 0, 0.45);
+}
+
+.clasp-strap {
+  width: 34px;
+  height: 42px;
+
+  background: #141217;
+
+  border-top: 1px solid #413942;
+  border-bottom: 1px solid #413942;
+}
+
 /* little metal corner pieces */
 
 .diary-cover .corner {
@@ -580,7 +630,12 @@ body::after {
 
   padding: 12px 16px;
 
-  background: #b49aaa;
+  background:
+    linear-gradient(
+      135deg,
+      #c3a8b7,
+      #aa8b9d
+    );
 
   color: #1b1720;
 
@@ -589,7 +644,25 @@ body::after {
   transform: rotate(-5deg);
 
   box-shadow:
-    3px 4px 0 rgba(0, 0, 0, 0.3);
+    3px 4px 0 rgba(0, 0, 0, 0.28);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cover-sticker::before {
+  content: "";
+
+  position: absolute;
+
+  top: -7px;
+  left: 14px;
+
+  width: 36px;
+  height: 12px;
+
+  background: rgba(224, 208, 216, 0.35);
+
+  transform: rotate(3deg);
 }
 
 .cover-footer {
@@ -612,12 +685,35 @@ body::after {
 .diary-tabs {
   position: absolute;
 
-  top: 140px;
-  right: -50px;
+  top: 145px;
+  right: -42px;
 
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
+
+  z-index: 4;
+}
+
+.diary-tabs span {
+  width: 48px;
+
+  padding: 16px 5px;
+
+  background: #a1798e;
+
+  border: 1px solid #bea0af;
+
+  color: #17131a;
+
+  font-size: 10px;
+
+  writing-mode: vertical-rl;
+
+  border-radius: 0 4px 4px 0;
+
+  box-shadow:
+    3px 3px 8px rgba(0, 0, 0, 0.25);
 }
 
 .diary-tabs span {
@@ -1136,4 +1232,31 @@ body::after {
     inset 0 0 12px rgba(255,255,255,0.03);
 
   transform: translateY(-2px) scale(1.02);
+}
+
+.diary-cover {
+  transform-style: preserve-3d;
+}
+
+.diary-cover::before {
+  content: "";
+
+  position: absolute;
+
+  left: 22px;
+  top: 0;
+  bottom: 0;
+
+  width: 1px;
+
+  background: #312c38;
+}
+
+.diary-cover {
+  box-shadow:
+    0 0 0 5px #090a0f,
+    0 0 0 6px #34303d,
+    8px 12px 0 #151218,
+    12px 18px 28px rgba(0, 0, 0, 0.55),
+    0 0 35px rgba(187, 126, 158, 0.10);
 }
